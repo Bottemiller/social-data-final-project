@@ -32,22 +32,35 @@
             color: white;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
+        .photo-credit {
+            font-size: 0.8rem;
+            text-align: right;
+            padding: 10px 20px 0 0;
+            color: #555;
+        }
         .byline {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0;
             font-style: italic;
             color: #888;
+            font-size: 1.1rem;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0 20px 40px 20px;
         }
         h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
             color: #16c79a;
             margin-top: 50px;
+        }
+        h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: #eee;
+            margin-bottom: 15px;
         }
         p {
             font-size: 1.1rem;
@@ -57,7 +70,7 @@
         .visual-container {
             margin: 40px 0;
             background: #1a1a1a;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
@@ -76,12 +89,6 @@
         }
         .caption b {
             color: #eee;
-        }
-        .photo-credit {
-            font-size: 0.8rem;
-            text-align: right;
-            margin-top: 5px;
-            color: #555;
         }
         .references {
             margin-top: 80px;
@@ -108,6 +115,7 @@
         <p>To answer this, we analyzed the 2025 hourly trends of pedestrians using the City of Melbourne open data, generated from over 60 sensors placed strategically throughout the Central Business District. By exploring these patterns, we can begin to understand the "why" behind the way this city moves.</p>
 
         <div class="visual-container">
+            <h3>Visualizing the Trimodal Weekday Pattern</h3>
             <iframe src="hourly_plot.html"></iframe>
             <div class="caption">
                 <b>Figure 1: Weekday Grind vs. Weekend Flow.</b> This graph compares the average pedestrian counts during the week and on the weekend. Click on a point to discover the exact pedestrian count at that time. Notice the trimodal pattern of the weekday line which represents the morning, lunch and afternoon rush whereas the weekend shows a smooth curve. The weekends allow for the social culture of the city to naturally flow whereas the weekdays follow a busy workweek schedule.
@@ -119,6 +127,7 @@
         <p>What is surprising, however, is the "reality" of the weekends. While people are forced into a rigid routine during the work week, the city's natural flow emerges on Saturday and Sunday. On these days, the curve is smooth, peaking around 2 pm. This suggests that Melbourne's residents are far more laid back than the weekday construct shows. Another weekend prime time includes a peak at 10 pm; this is significant because it shows how the city has been economically curated for a culture of lively bars and cafes.</p>
 
         <div class="visual-container">
+            <h3>Heatmap: Spatial Activity by Day and Hour</h3>
             <iframe src="weekly_heatmap_new.html"></iframe>
             <div class="caption">
                 <b>Figure 2: A Deep Dive into Daily Patterns.</b> This heat map goes more in depth on pedestrian patterns for the specific days of the week. Hover over a block to see the average pedestrian count, the day, and the time. Filter using the location tab to see a specific area of Melbourne. Popular office areas such as La Trobe St. (West) represent the rigid weekly schedule whereas shopping and leisure areas such as Queen Victoria Market show the laid back tendencies of the weekends. Only the 5 busiest areas are represented in this map.
@@ -133,6 +142,7 @@
         <p>While the heatmap allows us to see how Fridays differ from Mondays, the animated map reveals a universal rhythm. Regardless of the day, the pulse follows a familiar cycle: morning peaks at transit hubs, a midday rush at the markets, and a gradual calm at night. According to the Australian National Center for Transport and Mobility Research and Development, the number of vehicles entering the city center has dropped by 14%, and commuting by car has decreased by 25%.</p>
 
         <div class="visual-container">
+            <h3>The Pulse: Hourly Animated Flow</h3>
             <iframe src="animated_sensor_map_final.html"></iframe>
             <div class="caption">
                 <b>Figure 3: Mapping the Hourly Heartbeat.</b> The animated sensor map shows the hourly transitions and flows of the city throughout a day. This map focuses more on the “pulse” of each location and how pedestrians move between the locations. Hover over the dot to see the exact average pedestrian count in that area. Feel free to pause the animation by clicking the square in the bottom left corner.
