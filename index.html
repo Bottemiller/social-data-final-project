@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne: A City in Motion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111;
+            color: #eee;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .hero-section {
+            width: 100%;
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('jacob-dyer-4cgjUoZoYhk-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 0;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #16c79a;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #ccc;
+        }
+        .visual-container {
+            margin: 40px 0;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 4px;
+        }
+        .caption {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #888;
+            margin-top: 15px;
+            padding: 0 10px;
+            border-left: 3px solid #16c79a;
+        }
+        .references {
+            margin-top: 80px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>Melbourne: A City in Motion</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>The Global Pulse</h2>
+        <p>Melbourne: the city of… hmm, not sure. As exchange students from the United States, our team was curious about this Australian city. After discovering that our exchange friend, Tracy, was from Melbourne, we couldn't help but want to dig into the "pulse" of the city. Is it more like Copenhagen or Houston, Texas?</p>
+        <p>To answer this, we analyzed the 2025 hourly trends of pedestrians using the City of Melbourne open data, generated from over 60 sensors placed strategically throughout the Central Business District. By exploring these patterns, we can begin to understand the "why" behind the way this city moves.</p>
+
+        <div class="visual-container">
+            <iframe src="hourly_plot.html"></iframe>
+            <div class="caption">
+                This graph compares the average pedestrian counts during the week and on the weekend. Click on a point to discover the exact pedestrian count at that time. Notice the trimodal pattern of the weekday line which represents the morning, lunch and afternoon rush whereas the weekend shows a smooth curve.
+            </div>
+        </div>
+
+        <h2>The Daily Grind</h2>
+        <p>During the week, we expect to see a morning rush, a lunch rush, and a late afternoon rush as workers head home. As anticipated, the weekday pedestrian distribution follows a "trimodal" pattern with clear spikes at 8 am, 1 pm, and 5 pm. This rhythm is relatively unsurprising, given the typical 8 to 5 routine followed by most major global cities.</p>
+        <p>What is surprising, however, is the "reality" of the weekends. While people are forced into a rigid routine during the work week, the city's natural flow emerges on Saturday and Sunday. On these days, the curve is smooth, peaking around 2 pm. This suggests that Melbourne's residents are far more laid back than the weekday construct shows. Another weekend prime time includes a peak at 10 pm; this is significant because it shows how the city has been economically curated for a culture of lively bars and cafes.</p>
+
+        <div class="visual-container">
+            <iframe src="weekly_heatmap_final.html"></iframe>
+            <div class="caption">
+                This heat map goes more in depth on pedestrian patterns for the specific days of the week. Hover over a block to see the average pedestrian count, the day, and the time. Filter using the location tab to see a specific area of Melbourne. Only the 5 busiest areas are represented in this map.
+            </div>
+        </div>
+
+        <h2>The Friday Bridge</h2>
+        <p>While Monday through Thursday are predictable, Friday acts as a bridge to the weekend festivities. Friday's "afternoon rush" is more spread out as workers head home early or walk to post-work plans. Additionally, Friday night is significantly more active compared to other weeknights, signaling the revival of nightlife. In the data, Saturday night looks almost identical to Friday night, proving that Melbourne's “pulse” isn't simply about the sun rising, it’s about the social culture of its people.</p>
+        <p>The <i>Journal of Transport Geography</i> emphasizes the concept of "spatiotemporal relationships," which is the idea that specific characteristics of an area, like land use, impact pedestrian volume. For example, if you select La Trobe St. (West) in the filter, you see a classic "weekday" street dominated by office space. In contrast, Queen Victoria Market is a "weekend" street; its status as a famous "point of interest" creates a continuous, flowing volume of people that ignores the office schedule.</p>
+
+        <h2>A City in Motion</h2>
+        <p>While the heatmap allows us to see how Fridays differ from Mondays, the animated map reveals a universal rhythm. Regardless of the day, the pulse follows a familiar cycle: morning peaks at transit hubs, a midday rush at the markets, and a gradual calm at night. According to the Australian National Center for Transport and Mobility Research and Development, the number of vehicles entering the city center has dropped by 14%, and commuting by car has decreased by 25%.</p>
+
+        <div class="visual-container">
+            <iframe src="hourly_pulse_map.html"></iframe>
+            <div class="caption">
+                The animated sensor map shows the hourly transitions and flows of the city throughout a day. This map focuses more on the “pulse” of each location and how pedestrians move between the locations. Feel free to pause the animation by clicking the square in the bottom left corner.
+            </div>
+        </div>
+
+        <p>As fewer people rely on cars, more are walking or biking, making pedestrian sensor data the most important tool for modern city planning. As Melbourne designs its walkways for a rapidly growing population, prioritizing walkability based on this sensor data is crucial.</p>
+
+        <h2>The Verdict</h2>
+        <p>Ultimately, our research into the “pulse” of Melbourne revealed a city that is constantly shifting. The smooth weekend curves and 2 pm peaks feel like the leisure-heavy culture of Copenhagen, whereas the rigid weekday spikes reveal a "Houston" side of the city. This flexibility is Melbourne's greatest strength; a city that can shift from a work-focused financial hub to a lively neighborhood at the change of a clock. Our research revealed one more thing: we definitely know where our next travel spot will be.</p>
+
+        <div class="references">
+            <h3>References</h3>
+            <p>Fitzgerald, S. (2025, October 21). Melbourne pedestrian behaviour: Problems and Safety Solutions. iMOVE Australia Cooperative Research Centre | Transport R&D. https://imoveaustralia.com/project/project-outcomes/melbourne-pedestrian-behaviour-problems-and-safety-solutions/</p>
+            <p>Pfiester, L. M., Thompson, R. G., & Zhang, L. (2021). Spatiotemporal exploration of Melbourne pedestrian demand. Journal of Transport Geography, 95, 103151. https://doi.org/10.1016/j.jtrangeo.2021.103151</p>
+        </div>
+    </div>
+
+</body>
+</html>
